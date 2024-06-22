@@ -1,0 +1,48 @@
+body{
+    margin: 20px;
+    background-color:darkcyan;
+    font-family: Arial, sans-serif;
+}
+
+.chat-box{
+    margin-top: 55px;
+    margin-left:20px;
+}
+.chat{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    width: 325px;
+    display: inline-block;
+}
+
+.msg{
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 16px;
+    padding:5px 15px;
+}
+.nav{
+    top: 0px;
+    position:fixed;
+    background-color:greenyellow;
+    width: 90%;
+    height: 50px;
+    border-radius: 16px;
+    border: 1px solid black;
+    
+}
+h3{
+    text-align: center;
+}
+#ach{
+    position: absolute;
+    top: 13px;
+    display:flex;
+    margin-left: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: cyan;
+}
