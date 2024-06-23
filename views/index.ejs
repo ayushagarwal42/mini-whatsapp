@@ -26,7 +26,7 @@
                         <button>Edit</button>
                     </form>
                     <form method="post" action="/chats/<%=chat._id%>?_method=DELETE">
-                        <button>Delete</button>
+                        <button onclick="confirmDelete(event)">Delete</button>
                     </form>
                 </div>
                 <p><b>Received By:</b><i><%=chat.to%></i></p>
@@ -38,6 +38,7 @@
             <br>
         <% } %>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>

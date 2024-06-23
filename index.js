@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chat")
 const methodoverride=require("method-override");
+require('dotenv').config();
+const port = process.env.PORT || 3000; // Default port 3000
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -12,7 +14,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(methodoverride("_method"));
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/Whatsapp")
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("Database Connected...");
     })
@@ -96,6 +98,6 @@ app.get("/", (req, res) => {
     res.send("root is working");
 });
 
-app.listen(8080, () => {
-    console.log("app is listening on port 8080");
+app.listen(port, () => {
+    console.log(`app is running on port ${port}`);
 })
